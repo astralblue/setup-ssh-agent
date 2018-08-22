@@ -314,7 +314,7 @@ emit_agent_env() {
 }
 
 display_agent_info() {
-	echo 'echo "Agent running at $SSH_AUTH_SOCK (PID $SSH_AGENT_PID)";'
+	echo 'echo "Agent running at $SSH_AUTH_SOCK${SSH_AGENT_PID+" (PID $SSH_AGENT_PID)"}";'
 }
 
 main "$@"
